@@ -45,6 +45,10 @@
       when: configure_sublime
       tags: ['sublime-text']
 
+    - import_tasks: tasks/install-aws-cli.yml
+      when: install_aws_cli
+      tags: ['aws-cli']
+
     - block:
         - name: Run configured post-provision ansible task files.
           include_tasks: "{{ outer_item }}"

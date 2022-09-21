@@ -4,6 +4,7 @@ downloads: ~/.ansible-downloads/
 configure_dotfiles: true
 configure_terminal: true
 configure_osx: true
+install_aws_cli: true
 
 # Set to 'true' to configure the Dock via dockutil.
 configure_dock: false
@@ -34,52 +35,66 @@ dotfiles_files:
   - .osx
   - .vimrc
 
+executable_temp_dir: /tmp
+
 homebrew_installed_packages:
   # - ansible # Installed via Pip.
-  - autoconf
+  # - autoconf
+  - bash
   - bash-completion
-  - doxygen
-  - gettext
-  - gifsicle
+  # - doxygen
+  # - gettext
+  # - gifsicle
   - git
-  - github/gh/gh
+  # - github/gh/gh
   - go
   - gpg
-  - httpie
+  # - httpie
   - iperf
-  - libevent
-  - sqlite
-  - mcrypt
+  - iproute2mac
+  - jo
+  - jq
+  # - libevent
+  - lnav
+  # - sqlite
+  # - mcrypt
+  - netcat
   - nmap
   - node
-  - nvm
-  - php
+  # - nvm
+  # - php
+  - shellcheck
   - ssh-copy-id
   - cowsay
   - readline
+  - oh-my-posh
   - openssl
-  - pv
+  # - pv
   - wget
-  - wrk
+  # - wrk
   - zsh-history-substring-search
 
 homebrew_taps:
   - homebrew/core
   - homebrew/cask
+  - jandedobbeleer/oh-my-posh
 
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
   - chromedriver
-  - docker
-  - dropbox
   - firefox
+  - visual-studio-code
+  - docker
+  # - dropbox
   - google-chrome
   - handbrake
-  - licecap
-  - sequel-ace
-  - slack
-  - sublime-text
+  - iterm2
+  # - licecap
+  # - sequel-ace
+  # - slack
+  # - sublime-text
   - transmit
+  # - zoom
 
 # See `geerlingguy.mas` role documentation for usage instructions.
 mas_installed_apps: []
