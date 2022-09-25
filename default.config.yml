@@ -25,9 +25,11 @@ sudoers_custom_config: ''
 #   # Allow users in admin group to use sudo with no password.
 #   %admin ALL=(ALL) NOPASSWD: ALL
 
-dotfiles_repo: https://github.com/geerlingguy/dotfiles.git
+dotfiles_repo: /Users/Shared/repos/forks/dotfiles/geerlingguy
+# dotfiles_repo: https://github.com/geerlingguy/dotfiles.git
 dotfiles_repo_accept_hostkey: true
-dotfiles_repo_local_destination: ~/Development/GitHub/dotfiles
+dotfiles_repo_local_destination: /Users/Shared/repos/forks/dotfiles/geerlingguy
+# dotfiles_repo_local_destination: ~/Development/GitHub/dotfiles
 dotfiles_files:
   - .zshrc
   - .gitignore
@@ -35,13 +37,15 @@ dotfiles_files:
   - .osx
   - .vimrc
 
-executable_temp_dir: /tmp
+executable_temp_dir: $HOME/Downloads
 
 homebrew_installed_packages:
   # - ansible # Installed via Pip.
   # - autoconf
+  - awscli
   - bash
   - bash-completion
+  - cowsay
   # - doxygen
   # - gettext
   # - gifsicle
@@ -56,20 +60,20 @@ homebrew_installed_packages:
   - jq
   # - libevent
   - lnav
-  # - sqlite
+  - mas
   # - mcrypt
   - netcat
   - nmap
   - node
   # - nvm
-  # - php
-  - shellcheck
-  - ssh-copy-id
-  - cowsay
-  - readline
   - oh-my-posh
   - openssl
   # - pv
+  # - php
+  - shellcheck
+  - ssh-copy-id
+  - readline
+  # - sqlite
   - wget
   # - wrk
   - zsh-history-substring-search
@@ -90,6 +94,7 @@ homebrew_cask_apps:
   - handbrake
   - iterm2
   # - licecap
+  - postman
   # - sequel-ace
   # - slack
   # - sublime-text
@@ -97,7 +102,19 @@ homebrew_cask_apps:
   # - zoom
 
 # See `geerlingguy.mas` role documentation for usage instructions.
-mas_installed_apps: []
+mas_installed_apps: [
+  - { id: 497714887, name: "WebSSH" }
+  - { id: 425424353, name: "The Unarchiver" }
+  - { id: 803453959, name: "Slack" }
+  - { id: 441258766, name: "Magnet" }
+  - { id: 1484051912, name: "Find It Server" }
+]
+mas_uninstalled_apps:
+  # - { id: 408981434, name: "iMovie" } 
+  - { id: 409183694, name: "Keynote" }
+  - { id: 409201541, name: "Pages" }
+  - { id: 409203825, name: "Numbers" }
+  - { id: 682658836, name: "GarageBand" }
 mas_email: ""
 mas_password: ""
 

@@ -3,6 +3,9 @@
 # https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
 - name: Download awscliv2 installer.
   unarchive:
+    # src: "https://awscli.amazonaws.com/awscli-exe-linux-arm644ubxd2ux.zip.zip"
+   # 
+    # src: https://awscli.amazonaws.com/AWSCLIV2.pkg
     src: "https://awscli.amazonaws.com/awscli-exe-linux-{{ ansible_architecture }}.zip"
     dest: "{{ executable_temp_dir }}"
     remote_src: true
