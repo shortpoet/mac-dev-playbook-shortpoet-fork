@@ -13,19 +13,19 @@
 
   roles:
     - role: elliotweiser.osx-command-line-tools
-    - role: ./roles/geerlingguy.homebrew
-    # - role: geerlingguy.mac.homebrew
+    # - role: ./roles/homebrew
+    - role: geerlingguy.mac.homebrew
       tags: ['homebrew']
-    - role: ./roles/geerlingguy.dotfiles
-    # - role: geerlingguy.dotfiles
+    # - role: ./roles/geerlingguy.dotfiles
+    - role: geerlingguy.dotfiles
       when: configure_dotfiles
       tags: ['dotfiles']
-    role: ./roles/geerlingguy.mas
-    # - role: geerlingguy.mac.mas
+    # - role: ./roles/mas
+    - role: geerlingguy.mac.mas
       when: mas_installed_apps or mas_installed_app_ids
       tags: ['mas']
-    - role: ./roles/geerlingguy.dock
-    # - role: geerlingguy.mac.dock
+    # - role: ./roles/dock
+    - role: geerlingguy.mac.dock
       when: configure_dock
       tags: ['dock']
 

@@ -1,0 +1,7 @@
+[defaults]
+nocows = True
+roles_path = ./roles:/etc/ansible/roles
+inventory = inventory
+become = true
+stdout_callback = yaml
+private_key_file = ~/Dropbox/.ssh/id_ed25519_github_macbookair
